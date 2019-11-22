@@ -286,11 +286,6 @@ if(NOT TBB_FOUND)
                                   )
         elseif(TBB_LIBRARIES_RELEASE)
             set_target_properties(tbb PROPERTIES IMPORTED_LOCATION ${TBB_LIBRARIES_RELEASE})
-        else()
-            set_target_properties(tbb PROPERTIES
-                                  INTERFACE_COMPILE_DEFINITIONS "${TBB_DEFINITIONS_DEBUG}"
-                                  IMPORTED_LOCATION              ${TBB_LIBRARIES_DEBUG}
-                                  )
         endif()
     endif()
 
